@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Akshaya Patra is an Indian NGO Providing Mid-Day Meal to 1.6 Million Children Every Day</title>
+    <h2> Explore Opportunities: </h2>
+    <p> "Your time and talent can make a real difference in people's lives " </p>
+    </head>
+
+<!--Button-->
+<div id="wrapper" style="z-index: 1;" >
+
+        <!-- Header -->
+          <header id="header" class="alt">
+            <div style="display:inline-block;">
+              <input type="email" id="fname" placeholder="Your email address:"> 
+              <br>
+              <button class="button special" id="butt" onclick="signedUp()"> Sign Up </button>
+            </div>
+
+          </header>
+
+
+      </div>
+
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCP_aB4ESWSrJLw3dK4onNuDDwBWAh_2cI",
+    authDomain: "akshaya-patra-test.firebaseapp.com",
+    databaseURL: "https://akshaya-patra-test.firebaseio.com",
+    storageBucket: "akshaya-patra-test.appspot.com",
+    messagingSenderId: "478900433771"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+<!--Link to Database-->
+        <script>
+        function signedUp() {
+            var email = document.getElementById("fname").value;
+            var button = document.getElementById("butt");
+            console.log(button);
+            button.value = "Done!";
+          button.innerHTML = "Done!";
+            console.log(email);
+            var myFirebaseRef = new Firebase("https://akshaya-patra-test.firebaseio.com");
+            myFirebaseRef.push({
+  email: email,
+});
+
+        }
+        </script>
+
+<!--Link to Javascript-->
+	<body>
+		<script src = "akshayapatra.js"></script>
+	</body>  
+</html>
