@@ -6,27 +6,7 @@
     <p> "Your time and talent can make a real difference in people's lives " </p>
     </head>
 
-<!--Button-->
-<div id="wrapper" style="z-index: 1;" >
-
-        <!-- Header -->
-          <header id="header" class="alt">
-            <div style="display:inline-block;">
-              <input type="email" id="fname" placeholder="Your email address:"> 
-              <br>
-              <button class="button special" id="butt" onclick="signedUp()"> Sign Up </button>
-            </div>
-
-          </header>
-
-
-      </div>
-
-</div>
-
-
-
-<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -38,27 +18,59 @@
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
+  firebase.database().ref('/Opportunities/').once('value').then(function(snapshot) {
+    var data = snapshot.val();
+    console.log(data);
+    var kCount = document.getElementById("kitchenCapacity");
+    var imageLink = data.kitchen.image;
+    console.log(imageLink);
+    kCount.innerHTML = "<img src=" + imageLink + ">"
+  });
 </script>
 
-<!--Link to Database-->
-        <script>
-        function signedUp() {
-            var email = document.getElementById("fname").value;
-            var button = document.getElementById("butt");
-            console.log(button);
-            button.value = "Done!";
-          button.innerHTML = "Done!";
-            console.log(email);
-            var myFirebaseRef = new Firebase("https://akshaya-patra-test.firebaseio.com");
-            myFirebaseRef.push({
-  email: email,
-});
+<!--Button-->
+<div id="wrapper" style="z-index: 1;" >
 
-        }
-        </script>
+        <!-- Header -->
+          <header id="header" class="alt">
+            <div style="display:inline-block;">
+              <input type="email" id="fname" placeholder="Your email address:"> 
+              <br>
+              <button class="button special" id="button" onclick="signedUp()"> Sign Up </button>
+
+              <p style="text-align: center;"> The current capacity of our kitchens is : </p>
+              <p id = "kitchenCapacity"> </p>
+
+            </div>
+
+          </header>
+
+
+      </div>
+
+</div>
+
+
+<script>
+       function signedUp() {
+           var email = document.getElementById("fname").value;
+           var button = document.getElementById("button");
+           console.log(button);
+           button.value = "Done!";
+         button.innerHTML = "Done!";
+           console.log(email);
+            firebase.database().ref('users/').set({
+    email: email,
+  });
+
+
+       }
+       </script>
+
 
 <!--Link to Javascript-->
 	<body>
-		<script src = "akshayapatra.js"></script>
-	</body>  
+<!-- 		<script src = "akshayapatra.js"></script>
+ -->	</body>  
 </html>
