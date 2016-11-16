@@ -9,14 +9,23 @@
 <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 <script>
   // Initialize Firebase
-  var config = {
+  var config1_opportunities = {
     apiKey: "AIzaSyCP_aB4ESWSrJLw3dK4onNuDDwBWAh_2cI",
     authDomain: "akshaya-patra-test.firebaseapp.com",
     databaseURL: "https://akshaya-patra-test.firebaseio.com",
     storageBucket: "akshaya-patra-test.appspot.com",
     messagingSenderId: "478900433771"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config1_opportunities);
+
+    var config2_volunteers = {
+    apiKey: "AIzaSyBO7nWqSHEBgcIJrnTtDKe3B_jNUtJeCHE",
+    authDomain: "volunteers-330ae.firebaseapp.com",
+    databaseURL: "https://volunteers-330ae.firebaseio.com",
+    storageBucket: "volunteers-330ae.appspot.com",
+    messagingSenderId: "188696509192"
+  };
+  firebase.initializeApp(config2_volunteers);
 
   var database = firebase.database();
   firebase.database().ref('/Opportunities/').once('value').then(function(snapshot) {
