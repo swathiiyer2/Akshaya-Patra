@@ -6,26 +6,18 @@
     <p> "Your time and talent can make a real difference in people's lives " </p>
     </head>
 
+//Opportunities Firebase
 <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 <script>
   // Initialize Firebase
-  var config1_opportunities = {
+  var config = {
     apiKey: "AIzaSyCP_aB4ESWSrJLw3dK4onNuDDwBWAh_2cI",
     authDomain: "akshaya-patra-test.firebaseapp.com",
     databaseURL: "https://akshaya-patra-test.firebaseio.com",
     storageBucket: "akshaya-patra-test.appspot.com",
     messagingSenderId: "478900433771"
   };
-  firebase.initializeApp(config1_opportunities);
-
-    var config2_volunteers = {
-    apiKey: "AIzaSyBO7nWqSHEBgcIJrnTtDKe3B_jNUtJeCHE",
-    authDomain: "volunteers-330ae.firebaseapp.com",
-    databaseURL: "https://volunteers-330ae.firebaseio.com",
-    storageBucket: "volunteers-330ae.appspot.com",
-    messagingSenderId: "188696509192"
-  };
-  firebase.initializeApp(config2_volunteers);
+  firebase.initializeApp(config);
 
   var database = firebase.database();
   firebase.database().ref('/Opportunities/').once('value').then(function(snapshot) {
@@ -36,6 +28,20 @@
     console.log(imageLink);
     kCount.innerHTML = "<img src=" + imageLink + ">"
   });
+</script>
+
+//Volunteers Firebase
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBO7nWqSHEBgcIJrnTtDKe3B_jNUtJeCHE",
+    authDomain: "volunteers-330ae.firebaseapp.com",
+    databaseURL: "https://volunteers-330ae.firebaseio.com",
+    storageBucket: "volunteers-330ae.appspot.com",
+    messagingSenderId: "188696509192"
+  };
+  firebase.initializeApp(config);
 </script>
 
 <!--Button-->
