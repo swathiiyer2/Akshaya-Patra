@@ -2,13 +2,18 @@
 body {
     font: normal 16px/1.5, sans-serif;
     color: black-grey;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
-h1, p {
-    margin: 0;
-    padding: 0 0 0em; 
+h1, h2, p {
+    margin: 0; 
     color: white;   
+}
+
+#akshaya {
+    color: grey;
+    font-family: 'Delius Unicase', cursive;
+    margin: 5px;
 }
 
 header{
