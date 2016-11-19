@@ -1,13 +1,15 @@
 
 body {
     font: normal 16px/1.5, sans-serif;
-    color: black-grey;
+    color: #000080;
     font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+
 }
 
 h1, h2, p {
     margin: 0; 
-    color: white;   
 }
 
 #akshaya {
@@ -27,12 +29,11 @@ h1, h2, p {
 header{
     margin: 0;
     width: 100%;
-    background: #696969;
     padding: 30px;
     text-align: left;
-    box-shadow: 2px 2px 1px #888888;
-        border-radius: 10px;
-         background: linear-gradient(to right, #696969, #A9A9A9);
+    box-shadow: 0 0 4px #888888;
+    background: #696969;
+    background: linear-gradient(to right, #696969, #A9A9A9);
 
 }
 
@@ -45,7 +46,9 @@ header{
 
 #message {
     padding-top: 20px;
+    color: white; 
 }
+
 
 .foursquare {
     background: #F0F0F0;
