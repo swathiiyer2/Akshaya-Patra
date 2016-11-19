@@ -1,0 +1,151 @@
+
+body {
+    font: normal 16px/1.5, sans-serif;
+    color: black-grey;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0 0 0em; 
+    color: white;   
+}
+
+header{
+    margin: 0;
+    width: 100%;
+    background: grey;
+    padding: 30px;
+    text-align: left;
+}
+
+#title {
+    height: 50px;
+    width: 100%;
+    color: white;
+    display: flex;
+}
+
+#message {
+    padding-top: 30px;
+}
+
+.foursquare {
+    background: #F0F0F0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 1px;
+    display: block;
+    align-content: center;
+    align-self: center;
+    position: absolute;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 20%;
+}
+    #topleft {
+        background: #747171;
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+        display: flex;
+        float: left;
+        border-radius: 15px;    
+    }
+    #topright {
+        background: #747171;
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+        display: flex;
+        float: left;
+        border-radius: 15px;    
+    }
+    #bottomleft {
+        background: #747171;
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+        display: flex;
+        float: left;
+        clear: left;
+        border-radius: 15px;    
+    }
+    #bottomright {
+        background: #747171;
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+        display: flex;
+        float: left;
+        border-radius: 15px;    
+    }
+
+/*
+ * Caption component
+ */
+.caption {
+    position: relative;
+    overflow: hidden;
+
+    /* Only the -webkit- prefix is required these days */
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
+.caption::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+}
+
+.caption:hover::before {
+    background: rgba(0, 0, 0, .5);
+}
+
+.caption__media {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.caption__overlay__title {
+    -webkit-transform: translateY( -webkit-calc(-100% - 10px) );
+            transform: translateY( calc(-100% - 10px) );
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay__title {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
