@@ -16,6 +16,14 @@ h1, h2, p {
     margin: 5px;
 }
 
+#food {
+    font-family: 'Delius Unicase', cursive;
+    color: grey;
+    font-size: .6em;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
 header{
     margin: 0;
     width: 100%;
