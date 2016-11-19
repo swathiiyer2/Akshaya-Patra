@@ -11,14 +11,14 @@ h1, h2, p {
 }
 
 #akshaya {
-    color: grey;
+    color: #000080;
     font-family: 'Delius Unicase', cursive;
     margin: 5px;
 }
 
 #food {
     font-family: 'Delius Unicase', cursive;
-    color: grey;
+    color: #000080;
     font-size: .6em;
     margin: 5px;
     padding-bottom: 10px;
@@ -27,9 +27,13 @@ h1, h2, p {
 header{
     margin: 0;
     width: 100%;
-    background: grey;
+    background: #696969;
     padding: 30px;
     text-align: left;
+    box-shadow: 2px 2px 1px #888888;
+        border-radius: 10px;
+         background: linear-gradient(to right, #696969, #A9A9A9);
+
 }
 
 #title {
@@ -40,7 +44,7 @@ header{
 }
 
 #message {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .foursquare {
