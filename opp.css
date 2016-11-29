@@ -2,7 +2,7 @@
 body {
     font: normal 16px/1.5, sans-serif;
     color: #000080;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -34,7 +34,7 @@ header{
     padding: 30px;
     text-align: left;
     box-shadow: 0 0 4px #888888;
-    background: yellow;
+    background: #696969;
     background: linear-gradient(to right, #696969, #A9A9A9);
 
 }
