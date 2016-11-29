@@ -1,0 +1,58 @@
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  background: grey-100;
+}
+
+a {
+  text-decoration: none;
+}
+
+li a {
+  text-decoration: underline;
+  color: #0288d1;
+}
+
+header{
+    box-shadow: 0 0 4px #888888;
+    background: #696969;
+    background: linear-gradient(to right, #696969, #A9A9A9);
+
+}
+
+.header_message {
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    padding-top: 25px;
+    padding-left: 20px;
+    font-size: 24px;
+}
+
+.mdl-grid {
+  max-width: 1024px;
+  margin: auto;
+}
+.mdl-layout__header-row {
+  padding: 0;
+}
+.quickstart-user-details-container {
+  margin-top: 20px;
+  line-height: 25px;
+}
+#quickstart-sign-in-status {
+  font-weight: bold;
+}
+pre {
+  overflow-x: scroll;
+  line-height: 18px;
+}
+code {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+h3 {
+  background: url('http://lh3.ggpht.com/2_XYqHpDv4Ko21RoW-B7mApMkYTPxqK4it4ZdZWZH-LK8e4ZwmqhciGgUWoQDqdE6nU') no-repeat;
+  background-size: 40px;
+  padding-left: 50px;
+  color: white;
+}
