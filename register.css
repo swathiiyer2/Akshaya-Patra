@@ -5,6 +5,8 @@ html, body {
 
 a {
   text-decoration: none;
+  padding: 15px 32px;
+  color:white;
 }
 
 li a {
@@ -26,18 +28,43 @@ img{
 }
 
 
-div.box1{
-     top:300px;
-     width: 300px;
+#box1{
+     position:relative;
+     top:50px;
+     left:60px;
+     width: 600px;
      padding: 0;
      margin: 0;
      display: block;
 }
 
-div.box2{
-     width: 640px;
-     right: 40px;
+#box2{
+     position:relative;
+     left:650px;
+     bottom: 230px;
+     width: 600px;
      display: block;
+}
+
+#pictext{
+    color:white;
+    font-family: 'Bree Serif', serif;
+    font-size: 50px;
+    text-align: right;
+
+}
+#pictext2{
+    color:white;
+    padding-top: 15px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.content #scroll{
+    position:absolute;
+    left: 870px;
+    bottom:120px;
+    text-align: right;
 }
 
 .header_message {
