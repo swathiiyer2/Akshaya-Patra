@@ -9,6 +9,18 @@ firebase.initializeApp(config);
 var database = firebase.database(); 
 
 
+var url = window.location.href;
+var urlsplit = url.split('/');
+var pageId = urlsplit[urlsplit.length - 1];
+pageId = pageId.substring(pageId.length - 2);
+var num = parseInt(pageId, 10);
+if (!isNaN(num))
+{
+ 
+  customData(Math.floor(num/10), num%10);
+}
+    
+
 //////////////////////////////////////////////////////////////////////
 //IMPORTANT GLOBAL VARIABLES TO CHANGE
 var kitchenVisible = false; 
@@ -17,10 +29,16 @@ var officeVisible = false;
 var schoolVisible = false;
 //////////////////////////////////////////////////////////////////////
 //Call the appropriate functions to display the opportunities
-kitchenCall();
-corpCall();
-officeCall();
-schoolCall();
+
+
+
+
+//kitchenCall();
+//corpCall();
+//officeCall();
+//schoolCall();
+
+
 
 //Sorting Variables
 var startDate;
@@ -35,6 +53,9 @@ var location;
 var chosenImage; 
 var chosenTerm; 
 //////////////////////////////////////////////////////////////////////
+
+
+
 var chosenCat =  1; //This will give the category chosen in any number
 var chosenNumber = 0; //This will grant the number 
 //////////////////////////////////////////////////////////////////////
@@ -171,12 +192,14 @@ function kitchenCall(){
         console.log(data);
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        numElems = 2; 
+        numElems = snapshot.numChildren(); 
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
+
+
         for (var i = 0; i < numElems; i++){
             kInfo = kInfo +  databaseEvents[i].description;
-            kInfo = kInfo +  '<a href="individualItemPage.html">';
+            kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
             kInfo = kInfo + '</a>';
         } 
@@ -219,12 +242,12 @@ function officeCall(){
         console.log(data);
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        numElems = 1; 
+        numElems = snapshot.numChildren(); 
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
             kInfo = kInfo +  databaseEvents[i].description;
-            kInfo = kInfo +  '<a href="individualItemPage.html">';
+            kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
             kInfo = kInfo + '</a>';
         } 
@@ -259,12 +282,12 @@ function corpCall(){
         console.log(data);
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        numElems = 1; 
+        numElems = snapshot.numChildren(); 
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
             kInfo = kInfo +  databaseEvents[i].description;
-            kInfo = kInfo +  '<a href="individualItemPage.html">';
+            kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
             kInfo = kInfo + '</a>';
         } 
@@ -300,12 +323,12 @@ function schoolCall(){
         console.log(data);
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        numElems = 1; 
+        numElems = snapshot.numChildren(); 
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
             kInfo = kInfo +  databaseEvents[i].description;
-            kInfo = kInfo +  '<a href="individualItemPage.html">';
+            kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
             kInfo = kInfo + '</a>';
         } 
@@ -317,6 +340,7 @@ function schoolCall(){
     button.innerHTML = "School: Visible!";
   }
 }
+
 
 
 //Confirms the Changes Made to the Variable and Stores the Data in JavaScript
@@ -362,9 +386,3 @@ function getData()
 
 });
 }
-
-
-
-
-
-
