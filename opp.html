@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" type="text/css" href="opp.css">
 <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans|Delius+Unicase|Bree+Serif|Quicksand" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+<script src ="volunteeropportunities.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,18 +15,19 @@
 <p id = "food"> Unlimited food for education </p>-->
 
 <header>
-<h1 id = "title"> Volunteer Opportunities</h1>
+<h1 onclick="location.reload();" style="display:inline-block;margin-left:10px;">⬅️</h1>
+<h1 id = "title" style="display:inline-block;"> Volunteer Opportunities</h1>
 
 <!--<p id = "message">Your time and effort make a difference in children's lives.</p>-->
 </header>
 
- <div class="foursquare">
+ <div class="foursquare" id="foursquare">
 
         <div id="topleft">
         <div class="caption">
         <img class="caption__media" src="http://farm7.staticflickr.com/6088/6128773012_bd09c0bb4e_z_d.jpg" />
         <div class="caption__overlay">
-            <h1 class="caption__overlay__title">Truck</h1>
+            <h1 class="caption__overlay__title" id="buttonS"  onclick="schoolCall()"> Truck</h1>
             <p class="caption__overlay__content">
                 Our trucks are sponsored by Ford and Toyota. We use Volvos in honor of Edward Cullen. Truck drivers are essential to delivering food to the schools. Over 2000 pounds of chicken are driven around India in our trucks.
             </p>
@@ -36,7 +39,7 @@
          <div class="caption">
         <img class="caption__media" src="http://farm7.staticflickr.com/6088/6128773012_bd09c0bb4e_z_d.jpg" />
         <div class="caption__overlay">
-            <h1 class="caption__overlay__title">Kitchen</h1>
+            <h1 class="caption__overlay__title" id="buttonK"  onclick="kitchenCall()">Kitchen</h1>
             <p class="caption__overlay__content">
                 We bake potatoes and rice in our giant factory. Our food is very tasty and goes to feed millions of children in India. Our factory has a well-established process, producing over 10 gallons of masala chai per day, 100 pounds of paneer, and 1000 ounces of chicken tikka masala. Our recipes have been featured in Paula Dean and Top Chef. 
             </p>
@@ -48,7 +51,7 @@
          <div class="caption">
         <img class="caption__media" src="http://farm7.staticflickr.com/6088/6128773012_bd09c0bb4e_z_d.jpg" />
         <div class="caption__overlay">
-            <h1 class="caption__overlay__title">Administration</h1>
+            <h1 class="caption__overlay__title" d="buttonC"  onclick="corpCall()" >Administration</h1>
             <p class="caption__overlay__content">
                 Our administrators do everything for Akshaya Patra. We connect with students from colleges and get help in making websites. We are particularly grateful to the Stanford team for making this really cool page right here. Thank you.
             </p>
@@ -61,7 +64,7 @@
  <div class="caption">
         <img class="caption__media" src="http://farm7.staticflickr.com/6088/6128773012_bd09c0bb4e_z_d.jpg" />
         <div class="caption__overlay">
-            <h1 class="caption__overlay__title">Office</h1>
+            <h1 class="caption__overlay__title" id="buttonO" onclick="officeCall()" >Office</h1>
             <p class="caption__overlay__content">
                 Sell pencils for our office. Fundraise for the sake of the company. Make phone cals and man the front desk. Our office workers are alumni of the White House. We are exception.
             </p>
@@ -70,6 +73,14 @@
         </div>
 
     </div>
+
+    <div id="officePage"> 
+    <p id="officeOps"></p>
+    </div>
+    <p id="kitchenOps"></p>
+<p id="corpOps"></p>
+<p id="schoolOps"></p>
+
 
 </body>
 </html>

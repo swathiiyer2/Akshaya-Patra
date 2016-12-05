@@ -85,8 +85,10 @@ limitations under the License.
      * Handles the sign up button press.
      */
     function handleSignUp() {
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
+      var email = document.getElementById('email2').value;
+      var password = document.getElementById('password2').value;
+      console.log(email);
+      console.log(password);
       if (email.length < 4) {
         alert('Please enter an email address.');
         return;
@@ -192,7 +194,6 @@ limitations under the License.
       // [END authstatelistener]
       document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
       document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-      document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
       document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
     }
     window.onload = function() {
@@ -276,16 +277,16 @@ limitations under the License.
               &nbsp;&nbsp;&nbsp;
             </p>
             <p>
-              <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+              <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email2" name="email" placeholder="Email"/>
               &nbsp;&nbsp;&nbsp;
               </p>
               <p>
-              <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+              <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password2" name="password" placeholder="Password"/>
               &nbsp;&nbsp;&nbsp;
             </p>
             
             <br/><br/>
-            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign Up</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup" onclick="handleSignUp()">Sign Up</button>
             &nbsp;&nbsp;&nbsp;
           </div>
     </main>

@@ -16,6 +16,7 @@ pageId = pageId.substring(pageId.length - 2);
 var num = parseInt(pageId, 10);
 if (!isNaN(num))
 {
+ 
   customData(Math.floor(num/10), num%10);
 }
     
@@ -62,109 +63,109 @@ var chosenNumber = 0; //This will grant the number
 //////////////////////////////////////////////////////////////////////
 
 
-//customData(2,0); 
+// customData(2,0); 
 
-function customData(chosenCat, chosenNumber){
- if (chosenCat == 0){
-    firebase.database().ref('/school/').once('value').then(function(snapshot) 
-      {
-        var data = snapshot.val();
-        var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-        data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-        data.event18, data.event19, data.event20, data.event21, data.event22];
+// function customData(chosenCat, chosenNumber){
+//  if (chosenCat == 0){
+//     firebase.database().ref('/school/').once('value').then(function(snapshot) 
+//       {
+//         var data = snapshot.val();
+//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
+//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
+//         data.event18, data.event19, data.event20, data.event21, data.event22];
 
-        console.log(data);
+//         console.log(data);
 
-        //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        var kInfo = "";
-        //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-        kInfo = kInfo +  databaseEvents[chosenNumber].description;
-        kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-        kInfo = kInfo + databaseEvents[chosenNumber].location;
-        kInfo = kInfo + databaseEvents[chosenNumber].date;
+//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
+//         var kInfo = "";
+//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
+//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
+//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
+//         kInfo = kInfo + databaseEvents[chosenNumber].location;
+//         kInfo = kInfo + databaseEvents[chosenNumber].date;
 
-        document.getElementById('customDescription').innerHTML = kInfo; 
-      });
-  }
-else if (chosenCat == 1){
-    ///THIS IS VERY SUBJECT TO APPRECIATION
-      firebase.database().ref('/corp/').once('value').then(function(snapshot) 
-      {
-        var data = snapshot.val();
-        var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-        data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-        data.event18, data.event19, data.event20, data.event21, data.event22];
+//         document.getElementById('customDescription').innerHTML = kInfo; 
+//       });
+//   }
+// else if (chosenCat == 1){
+//     ///THIS IS VERY SUBJECT TO APPRECIATION
+//       firebase.database().ref('/corp/').once('value').then(function(snapshot) 
+//       {
+//         var data = snapshot.val();
+//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
+//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
+//         data.event18, data.event19, data.event20, data.event21, data.event22];
 
-        console.log(data);
+//         console.log(data);
 
-        //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        var kInfo = "";
-        //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-        kInfo = kInfo +  databaseEvents[chosenNumber].description;
-        kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-        kInfo = kInfo + databaseEvents[chosenNumber].location;
-        kInfo = kInfo + databaseEvents[chosenNumber].date;
+//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
+//         var kInfo = "";
+//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
+//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
+//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
+//         kInfo = kInfo + databaseEvents[chosenNumber].location;
+//         kInfo = kInfo + databaseEvents[chosenNumber].date;
 
-        document.getElementById('customDescription').innerHTML = kInfo; 
-      });
-      //END DEFINITION
-    kitchenVisible = true; 
-  }
-
-
-
-  else if (chosenCat == 2){
-    ///THIS IS VERY SUBJECT TO APPRECIATION
-      firebase.database().ref('/kitchen/').once('value').then(function(snapshot) 
-      {
-        var data = snapshot.val();
-        var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-        data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-        data.event18, data.event19, data.event20, data.event21, data.event22];
-
-        console.log(data);
-
-        //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        var kInfo = "";
-        //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-        kInfo = kInfo +  databaseEvents[chosenNumber].description;
-        kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-        kInfo = kInfo + databaseEvents[chosenNumber].location;
-        kInfo = kInfo + databaseEvents[chosenNumber].date;
-
-        document.getElementById('customDescription').innerHTML = kInfo; 
-      });
-      //END DEFINITION
-    kitchenVisible = true; 
-  }
-
-else if (chosenCat == 3){
-    ///THIS IS VERY SUBJECT TO APPRECIATION
-      firebase.database().ref('/office/').once('value').then(function(snapshot) 
-      {
-        var data = snapshot.val();
-        var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-        data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-        data.event18, data.event19, data.event20, data.event21, data.event22];
-
-        console.log(data);
-
-        //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-        var kInfo = "";
-        //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-        kInfo = kInfo +  databaseEvents[chosenNumber].description;
-        kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-        kInfo = kInfo + databaseEvents[chosenNumber].location;
-        kInfo = kInfo + databaseEvents[chosenNumber].date;
-
-        document.getElementById('customDescription').innerHTML = kInfo; 
-      });
-      //END DEFINITION
-    kitchenVisible = true; 
-  }
+//         document.getElementById('customDescription').innerHTML = kInfo; 
+//       });
+//       //END DEFINITION
+//     kitchenVisible = true; 
+//   }
 
 
-}
+
+//   else if (chosenCat == 2){
+//     ///THIS IS VERY SUBJECT TO APPRECIATION
+//       firebase.database().ref('/kitchen/').once('value').then(function(snapshot) 
+//       {
+//         var data = snapshot.val();
+//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
+//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
+//         data.event18, data.event19, data.event20, data.event21, data.event22];
+
+//         console.log(data);
+
+//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
+//         var kInfo = "";
+//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
+//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
+//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
+//         kInfo = kInfo + databaseEvents[chosenNumber].location;
+//         kInfo = kInfo + databaseEvents[chosenNumber].date;
+
+//         document.getElementById('customDescription').innerHTML = kInfo; 
+//       });
+//       //END DEFINITION
+//     kitchenVisible = true; 
+//   }
+
+// else if (chosenCat == 3){
+//     ///THIS IS VERY SUBJECT TO APPRECIATION
+//       firebase.database().ref('/office/').once('value').then(function(snapshot) 
+//       {
+//         var data = snapshot.val();
+//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
+//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
+//         data.event18, data.event19, data.event20, data.event21, data.event22];
+
+//         console.log(data);
+
+//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
+//         var kInfo = "";
+//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
+//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
+//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
+//         kInfo = kInfo + databaseEvents[chosenNumber].location;
+//         kInfo = kInfo + databaseEvents[chosenNumber].date;
+
+//         document.getElementById('customDescription').innerHTML = kInfo; 
+//       });
+//       //END DEFINITION
+//     kitchenVisible = true; 
+//   }
+
+
+// }
 
 
 
@@ -189,6 +190,7 @@ function kitchenCall(){
         data.event18, data.event19, data.event20, data.event21, data.event22];
 
         console.log(data);
+        document.getElementById("foursquare").style.visibility='hidden';
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
         numElems = snapshot.numChildren(); 
@@ -240,6 +242,8 @@ function officeCall(){
 
         console.log(data);
 
+        document.getElementById("foursquare").style.visibility='hidden';
+
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
         numElems = snapshot.numChildren(); 
         var kInfo = "";
@@ -279,6 +283,7 @@ function corpCall(){
         data.event18, data.event19, data.event20, data.event21, data.event22];
 
         console.log(data);
+        document.getElementById("foursquare").style.visibility='hidden';
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
         numElems = snapshot.numChildren(); 
@@ -320,6 +325,7 @@ function schoolCall(){
         data.event18, data.event19, data.event20, data.event21, data.event22];
 
         console.log(data);
+        document.getElementById("foursquare").style.visibility='hidden';
 
         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
         numElems = snapshot.numChildren(); 
