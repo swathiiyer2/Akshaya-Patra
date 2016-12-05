@@ -16,7 +16,6 @@ pageId = pageId.substring(pageId.length - 2);
 var num = parseInt(pageId, 10);
 if (!isNaN(num))
 {
- 
   customData(Math.floor(num/10), num%10);
 }
     
@@ -63,7 +62,7 @@ var chosenNumber = 0; //This will grant the number
 //////////////////////////////////////////////////////////////////////
 
 
-customData(2,0); 
+//customData(2,0); 
 
 function customData(chosenCat, chosenNumber){
  if (chosenCat == 0){
