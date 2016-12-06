@@ -11,26 +11,43 @@ body {
 h1, h2, p {
     margin: 0; 
     font-family: 'Quicksand', sans-serif;
-
 }
 
 img {
-  width: 500px;
-  height: 400px;
+  width: 450px;
+  height: 350px;
   display:block;
 }
 
 #individualPages{
     padding-top: 70px;
-    padding-left: 120px;
+    padding-left: 150px;
     display:block;
-   text-align: center;
+}
+
+#text {
+    font-size: 110%;
+    font-weight: bolder;
+    position: relative;
+    left: 530px;
+    top: 50px;
+}
+
+#officeOps {
+
 }
 
 #kitchenOps{
 
 }
 
+#corpOps {
+
+}
+
+#schoolOps {
+
+}
 
 
 #akshaya {
@@ -150,7 +167,6 @@ header{
     width:auto;
     height:auto;
     display: block;
-
 }
 
 .commentout{
