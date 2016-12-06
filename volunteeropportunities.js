@@ -62,7 +62,6 @@ function kitchenCall(){
     document.getElementById('kitchenOps').innerHTML = "";
     kitchenVisible = false; 
     button.value = "Kitchen: __";
-    button.innerHTML = "Kitchen __";
   }
   else if (kitchenVisible == false){
     ///THIS IS VERY SUBJECT TO APPRECIATION
@@ -83,17 +82,18 @@ function kitchenCall(){
 
 
         for (var i = 0; i < numElems; i++){
-            kInfo = kInfo +  databaseEvents[i].description;
-            //kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
+            kInfo = kInfo + '<div id = "content">';
+            kInfo = kInfo +  '<div id = "text">' + databaseEvents[i].description + '</div>';
+            kInfo = kInfo +  '<a href = "register.html" class = "button">Apply</a>';
+            kInfo = kInfo + "</div>";
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
-            //kInfo = kInfo + '</a>';
+            kInfo = kInfo + '</a>';
         } 
         document.getElementById('kitchenOps').innerHTML = kInfo; 
       });
       //END DEFINITION
     kitchenVisible = true; 
     button.value = "Kitchen: Visible!";
-    button.innerHTML = "Kitchrn: Visible!";
   }
 }
 
@@ -113,7 +113,6 @@ function officeCall(){
     document.getElementById('officeOps').innerHTML = "";
     officeVisible = false; 
     button.value = "Office: __";
-    button.innerHTML = "Office: __!";
   }
   else if (officeVisible == false){
     ///THIS IS VERY SUBJECT TO APPRECIATION
@@ -133,17 +132,18 @@ function officeCall(){
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
-            kInfo = kInfo +  databaseEvents[i].description;
-            //kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
+            kInfo = kInfo + '<div id = "content">';
+            kInfo = kInfo +  '<div id = "text">' + databaseEvents[i].description + '</div>';
+            kInfo = kInfo +  '<a href = "register.html" class = "button">Apply</a>';
+            kInfo = kInfo + "</div>";
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
-            //kInfo = kInfo + '</a>';
+            kInfo = kInfo + '</a>';
         } 
         document.getElementById('officeOps').innerHTML = kInfo; 
       });
       //END DEFINITION
     officeVisible = true; 
     button.value = "Office: Visible!";
-    button.innerHTML = "Office: Visible!";
   }
 }
 
@@ -155,7 +155,6 @@ function adminCall(){
     document.getElementById('adminOps').innerHTML = "";
     adminVisible = false; 
     button.value = "Admin.: __";
-    button.innerHTML = "Admin.: __";
   }
   else if (adminVisible == false){
     ///THIS IS VERY SUBJECT TO APPRECIATION
@@ -174,15 +173,18 @@ function adminCall(){
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
-            kInfo = kInfo +  databaseEvents[i].description;
+            kInfo = kInfo + '<div id = "content">';
+            kInfo = kInfo +  '<div id = "text">' + databaseEvents[i].description + '</div>';
+            kInfo = kInfo +  '<a href = "register.html" class = "button">Apply</a>';
+            kInfo = kInfo + "</div>";
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
+            kInfo = kInfo + '</a>';
         } 
         document.getElementById('adminOps').innerHTML = kInfo; 
       });
       //END DEFINITION
     adminVisible = true; 
     button.value = "Admin.: Visible!";
-    button.innerHTML = "Admin.: Visible!";
   }
 }
 
@@ -195,7 +197,6 @@ function truckCall(){
     document.getElementById('truckOps').innerHTML = "";
     truckVisible = false; 
     button.value = "Truck: __";
-    button.innerHTML = "Truck: __";
   }
   else if (truckVisible == false){
     ///THIS IS VERY SUBJECT TO APPRECIATION
@@ -214,15 +215,18 @@ function truckCall(){
         var kInfo = "";
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
-            kInfo = kInfo +  databaseEvents[i].description;
+            kInfo = kInfo + '<div id = "content">';
+            kInfo = kInfo +  '<div id = "text">' + databaseEvents[i].description + '</div>';
+            kInfo = kInfo +  '<a href = "register.html" class = "button">Apply</a>';
+            kInfo = kInfo + "</div>";
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
+            kInfo = kInfo + '</a>';
         } 
         document.getElementById('truckOps').innerHTML = kInfo; 
       });
       //END DEFINITION
     truckVisible = true; 
     button.value = "Truck: Visible!";
-    button.innerHTML = "Truck: Visible!";
   }
 }
 
