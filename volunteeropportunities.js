@@ -24,20 +24,11 @@ if (!isNaN(num))
 //////////////////////////////////////////////////////////////////////
 //IMPORTANT GLOBAL VARIABLES TO CHANGE
 var kitchenVisible = false; 
-var corpVisible = false; 
+var adminVisible = false; 
 var officeVisible = false;
-var schoolVisible = false;
+var truckVisible = false;
 //////////////////////////////////////////////////////////////////////
 //Call the appropriate functions to display the opportunities
-
-
-
-
-//kitchenCall();
-//corpCall();
-//officeCall();
-//schoolCall();
-
 
 
 //Sorting Variables
@@ -61,113 +52,6 @@ var chosenNumber = 0; //This will grant the number
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-// customData(2,0); 
-
-// function customData(chosenCat, chosenNumber){
-//  if (chosenCat == 0){
-//     firebase.database().ref('/school/').once('value').then(function(snapshot) 
-//       {
-//         var data = snapshot.val();
-//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-//         data.event18, data.event19, data.event20, data.event21, data.event22];
-
-//         console.log(data);
-
-//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-//         var kInfo = "";
-//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
-//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-//         kInfo = kInfo + databaseEvents[chosenNumber].location;
-//         kInfo = kInfo + databaseEvents[chosenNumber].date;
-
-//         document.getElementById('customDescription').innerHTML = kInfo; 
-//       });
-//   }
-// else if (chosenCat == 1){
-//     ///THIS IS VERY SUBJECT TO APPRECIATION
-//       firebase.database().ref('/corp/').once('value').then(function(snapshot) 
-//       {
-//         var data = snapshot.val();
-//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-//         data.event18, data.event19, data.event20, data.event21, data.event22];
-
-//         console.log(data);
-
-//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-//         var kInfo = "";
-//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
-//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-//         kInfo = kInfo + databaseEvents[chosenNumber].location;
-//         kInfo = kInfo + databaseEvents[chosenNumber].date;
-
-//         document.getElementById('customDescription').innerHTML = kInfo; 
-//       });
-//       //END DEFINITION
-//     kitchenVisible = true; 
-//   }
-
-
-
-//   else if (chosenCat == 2){
-//     ///THIS IS VERY SUBJECT TO APPRECIATION
-//       firebase.database().ref('/kitchen/').once('value').then(function(snapshot) 
-//       {
-//         var data = snapshot.val();
-//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-//         data.event18, data.event19, data.event20, data.event21, data.event22];
-
-//         console.log(data);
-
-//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-//         var kInfo = "";
-//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
-//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-//         kInfo = kInfo + databaseEvents[chosenNumber].location;
-//         kInfo = kInfo + databaseEvents[chosenNumber].date;
-
-//         document.getElementById('customDescription').innerHTML = kInfo; 
-//       });
-//       //END DEFINITION
-//     kitchenVisible = true; 
-//   }
-
-// else if (chosenCat == 3){
-//     ///THIS IS VERY SUBJECT TO APPRECIATION
-//       firebase.database().ref('/office/').once('value').then(function(snapshot) 
-//       {
-//         var data = snapshot.val();
-//         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
-//         data.event8, data.event9, data.event10, data.event11, data.event12, data.event13, data.event14, data.event15, data.event16, data.event17, 
-//         data.event18, data.event19, data.event20, data.event21, data.event22];
-
-//         console.log(data);
-
-//         //THIS NUMELEMS VARIABLE IS VERY IMPORTANT
-//         var kInfo = "";
-//         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
-//         kInfo = kInfo +  databaseEvents[chosenNumber].description;
-//         kInfo = kInfo +  "<img src=" + databaseEvents[chosenNumber].image + ">" ;
-//         kInfo = kInfo + databaseEvents[chosenNumber].location;
-//         kInfo = kInfo + databaseEvents[chosenNumber].date;
-
-//         document.getElementById('customDescription').innerHTML = kInfo; 
-//       });
-//       //END DEFINITION
-//     kitchenVisible = true; 
-//   }
-
-
-// }
-
-
 
 //Calculate and MAKE KITCHEN VISIBLE 
 function kitchenCall(){
@@ -263,19 +147,19 @@ function officeCall(){
   }
 }
 
-//GIVE CORP VARIABLE
-function corpCall(){
+//GIVE ADMIN VARIABLE
+function adminCall(){
   var button = document.getElementById("buttonC");
   console.log(button);
- if (corpVisible == true){
-    document.getElementById('corpOps').innerHTML = "";
-    corpVisible = false; 
-    button.value = "Corp.: __";
-    button.innerHTML = "Corp.: __";
+ if (adminVisible == true){
+    document.getElementById('adminOps').innerHTML = "";
+    adminVisible = false; 
+    button.value = "Admin.: __";
+    button.innerHTML = "Admin.: __";
   }
-  else if (corpVisible == false){
+  else if (adminVisible == false){
     ///THIS IS VERY SUBJECT TO APPRECIATION
-      firebase.database().ref('/corp/').once('value').then(function(snapshot) 
+      firebase.database().ref('/admin/').once('value').then(function(snapshot) 
       {
         var data = snapshot.val();
         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
@@ -291,33 +175,31 @@ function corpCall(){
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
             kInfo = kInfo +  databaseEvents[i].description;
-            //kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
-            //kInfo = kInfo + '</a>';
         } 
-        document.getElementById('corpOps').innerHTML = kInfo; 
+        document.getElementById('adminOps').innerHTML = kInfo; 
       });
       //END DEFINITION
-    corpVisible = true; 
-    button.value = "Corp.: Visible!";
-    button.innerHTML = "Corp.: Visible!";
+    adminVisible = true; 
+    button.value = "Admin.: Visible!";
+    button.innerHTML = "Admin.: Visible!";
   }
 }
 
-//GIVE SCHOOL VARIABLE
-function schoolCall(){
+//GIVE TRUCK VARIABLE
+function truckCall(){
   var button = document.getElementById("buttonS");
   console.log(button);
 
- if (schoolVisible == true){
-    document.getElementById('schoolOps').innerHTML = "";
-    schoolVisible = false; 
-    button.value = "School: __";
-    button.innerHTML = "School: __";
+ if (truckVisible == true){
+    document.getElementById('truckOps').innerHTML = "";
+    truckVisible = false; 
+    button.value = "Truck: __";
+    button.innerHTML = "Truck: __";
   }
-  else if (schoolVisible == false){
+  else if (truckVisible == false){
     ///THIS IS VERY SUBJECT TO APPRECIATION
-      firebase.database().ref('/school/').once('value').then(function(snapshot) 
+      firebase.database().ref('/truck/').once('value').then(function(snapshot) 
       {
         var data = snapshot.val();
         var databaseEvents = [data.event1, data.event2, data.event3, data.event4, data.event5, data.event6, data.event7, 
@@ -333,16 +215,14 @@ function schoolCall(){
         //THIS SHOULD DEFINITELY BE EDITED FOR DATE AND OTHER VARIABLES THAT NEED TO BE SORTED!!!!!!!!!
         for (var i = 0; i < numElems; i++){
             kInfo = kInfo +  databaseEvents[i].description;
-            //kInfo = kInfo + '<a href = "individualItemPage.html?id='+databaseEvents[i].id+'">';
             kInfo = kInfo +  '<img src="' + databaseEvents[i].image + '"/>' ;
-            //kInfo = kInfo + '</a>';
         } 
-        document.getElementById('schoolOps').innerHTML = kInfo; 
+        document.getElementById('truckOps').innerHTML = kInfo; 
       });
       //END DEFINITION
-    schoolVisible = true; 
-    button.value = "School: Visible!";
-    button.innerHTML = "School: Visible!";
+    truckVisible = true; 
+    button.value = "Truck: Visible!";
+    button.innerHTML = "Truck: Visible!";
   }
 }
 
