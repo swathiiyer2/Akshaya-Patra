@@ -28,9 +28,23 @@ img {
 #text {
     font-size: 110%;
     font-weight: bolder;
+}
+
+.button {
+    position: relative;
+    top: 40px;
+    background-color: #00008B; 
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#content {
     position: relative;
     left: 530px;
-    top: 50px;
+    top:50px;
 }
 
 #officeOps {
