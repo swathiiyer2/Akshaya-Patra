@@ -14,9 +14,23 @@ h1, h2, p {
 
 }
 
-#kitchenOps{
+img {
+  width: 500px;
+  height: 400px;
+  display:block;
+}
+
+#individualPages{
+    padding-top: 70px;
+    padding-left: 120px;
+    display:block;
    text-align: center;
 }
+
+#kitchenOps{
+
+}
+
 
 
 #akshaya {
@@ -133,7 +147,13 @@ header{
 }
 
 .caption__media {
+    width:auto;
+    height:auto;
     display: block;
+
+}
+
+.commentout{
     min-width: 100%;
     max-width: 100%;
     height: auto;
